@@ -1,0 +1,270 @@
+/* FONTS */
+
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+
+* {
+  color: white;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.Principal {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.Gauche {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 60vw;
+  height: 100vh;
+  padding-left: 45px;
+  background-color: rgb(0, 0, 0);
+}
+
+.Droite {
+  display: flex;
+  width: 40vw;
+  height: 100vh;
+  display: flex;
+}
+
+.title {
+  font-size: 100px;
+  margin-bottom: -1vh;
+  margin-top: -5vh;
+  position: relative;
+  letter-spacing: 20px;
+}
+
+.description {
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  font-weight: 800;
+  font-family: "Raleway", sans-serif;
+}
+
+.image {
+  width: 40px;
+  padding-top: 35px;
+}
+
+.LesBoutons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.bouton {
+  padding: 20px 40px;
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1px;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50vh;
+  font-family: "Anton", sans-serif;
+}
+
+.Noise {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent
+    url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation 0.2s infinite;
+  opacity: 0.9;
+  visibility: visible;
+}
+
+.contact {
+  margin-bottom: 10px;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 1px;
+}
+
+video {
+  position: absolute;
+  width: 40vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 410px;
+  width: 320px;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.pdp {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.noms {
+  font-size: 12px;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  pointer-events: none;
+}
+
+.localisation {
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  pointer-events: none;
+}
+
+.competences {
+  font-size: 12px;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  pointer-events: none;
+}
+
+/* ----------------------------------------------------------TOUTS LES HOVERS----------------------------------------------------------  */
+
+.title:hover {
+  background: -webkit-linear-gradient(rgb(150, 66, 80), rgb(194, 235, 12));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: blink 0.01s infinite;
+}
+
+.bouton:hover {
+  background-color: white;
+  color: black;
+}
+
+/* ----------------------------------------------------------TOUTES LES KEYFRAMES----------------------------------------------------------  */
+
+@keyframes blink {
+  10% {
+    scale: 1.1;
+  }
+
+  0% {
+    background: -webkit-linear-gradient(rgb(150, 66, 80), rgb(194, 235, 12));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  15% {
+    background: -webkit-linear-gradient(rgb(224, 20, 122), rgb(27, 135, 197));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes bg-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(-5%, -5%);
+  }
+
+  20% {
+    transform: translate(-10%, 5%);
+  }
+
+  30% {
+    transform: translate(5%, -10%);
+  }
+
+  40% {
+    transform: translate(-5%, 15%);
+  }
+
+  50% {
+    transform: translate(-10%, 5%);
+  }
+
+  60% {
+    transform: translate(15%, 0);
+  }
+
+  70% {
+    transform: translate(0, 10%);
+  }
+
+  80% {
+    transform: translate(-15%, 0);
+  }
+
+  90% {
+    transform: translate(10%, 5%);
+  }
+
+  100% {
+    transform: translate(5%, 0);
+  }
+}
+
+/* ----------------------------------------------------------RESPONSIVE----------------------------------------------------------  */
+
+@media screen and (max-width: 680px) {
+  .Principal {
+    flex-wrap: wrap;
+  }
+
+  .Gauche {
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+  }
+
+  .Droite {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  video {
+    width: 100vw;
+  }
+
+  .title {
+    font-size: 50px;
+    margin-top: 0;
+  }
+
+  .left-content {
+    padding-left: 0;
+  }
+}
